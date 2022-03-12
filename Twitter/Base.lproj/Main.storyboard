@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bHv-zP-One">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="lAL-hk-Nxg">
+            <objects>
+                <viewController id="bHv-zP-One" customClass="LoginViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hxt-r9-QdI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Gf-kL-cyd">
+                                <rect key="frame" x="95.5" y="305.5" width="184" height="56"/>
+                                <color key="backgroundColor" red="0.30568347289999998" green="0.7086540456" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="184" id="6eP-Lh-oZO"/>
+                                    <constraint firstAttribute="height" constant="56" id="Q7K-bH-e9V"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Login">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="35"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onLoginButton:" destination="bHv-zP-One" eventType="touchUpInside" id="z7E-k2-nds"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9i2-Dc-R1h"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9Gf-kL-cyd" firstAttribute="centerX" secondItem="Hxt-r9-QdI" secondAttribute="centerX" id="Ah2-uO-XnJ"/>
+                            <constraint firstItem="9Gf-kL-cyd" firstAttribute="centerY" secondItem="Hxt-r9-QdI" secondAttribute="centerY" id="Mbe-ju-YuI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="XPv-2D-7Yq" kind="presentation" identifier="loginToHome" modalPresentationStyle="fullScreen" id="rba-48-C93"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3ef-n6-gUN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1060" y="694.90254872563719"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="bkc-ZQ-897">
+            <objects>
+                <tableViewController id="dVW-lG-dL9" customClass="HomeTableViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="sc4-Q4-1FZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tweetCell" rowHeight="124" id="Kqo-dY-iZ4" customClass="TweetCellTableViewCell" customModule="Twitter" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="375" height="124"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Kqo-dY-iZ4" id="eV4-57-7oV">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="124"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eyK-wR-b99">
+                                            <rect key="frame" x="16" y="11" width="65" height="65"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="65" id="Ol2-qd-ktk"/>
+                                                <constraint firstAttribute="width" constant="65" id="cXx-2s-3rH"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Aaa Bbbbb" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IEM-OX-msh">
+                                            <rect key="frame" x="89" y="11" width="94" height="22"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tweet Content" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6BS-lk-JUT">
+                                            <rect key="frame" x="89" y="37" width="270" height="76"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="IEM-OX-msh" firstAttribute="leading" secondItem="eyK-wR-b99" secondAttribute="trailing" constant="8" id="H0m-Z0-63g"/>
+                                        <constraint firstItem="IEM-OX-msh" firstAttribute="leading" secondItem="eyK-wR-b99" secondAttribute="trailing" constant="8" id="HDw-k1-T6O"/>
+                                        <constraint firstItem="IEM-OX-msh" firstAttribute="top" secondItem="eV4-57-7oV" secondAttribute="topMargin" id="U3D-p7-aAn"/>
+                                        <constraint firstItem="6BS-lk-JUT" firstAttribute="trailing" secondItem="eV4-57-7oV" secondAttribute="trailingMargin" id="Zgk-oa-bz8"/>
+                                        <constraint firstItem="IEM-OX-msh" firstAttribute="top" secondItem="eV4-57-7oV" secondAttribute="topMargin" id="ZiV-ke-vqh"/>
+                                        <constraint firstItem="eyK-wR-b99" firstAttribute="top" secondItem="eV4-57-7oV" secondAttribute="topMargin" id="esE-MK-Zph"/>
+                                        <constraint firstItem="6BS-lk-JUT" firstAttribute="leading" secondItem="eyK-wR-b99" secondAttribute="trailing" constant="8" id="feq-F1-jmp"/>
+                                        <constraint firstItem="eyK-wR-b99" firstAttribute="leading" secondItem="eV4-57-7oV" secondAttribute="leadingMargin" id="jdT-YA-Wky"/>
+                                        <constraint firstItem="6BS-lk-JUT" firstAttribute="top" secondItem="IEM-OX-msh" secondAttribute="bottom" constant="4" id="r1B-pc-Avc"/>
+                                        <constraint firstItem="6BS-lk-JUT" firstAttribute="bottom" secondItem="eV4-57-7oV" secondAttribute="bottomMargin" id="rhf-1K-UPG"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="profileImageView" destination="eyK-wR-b99" id="AwX-AG-Wqf"/>
+                                    <outlet property="tweetContent" destination="6BS-lk-JUT" id="56a-2g-SOS"/>
+                                    <outlet property="userNameLabel" destination="IEM-OX-msh" id="lma-pK-TYp"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="dVW-lG-dL9" id="I75-1E-RMi"/>
+                            <outlet property="delegate" destination="dVW-lG-dL9" id="Dsi-DS-2sk"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Home" id="Chc-2B-2P3">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="euR-Fv-hnX">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="onLogout:" destination="dVW-lG-dL9" id="1ow-jp-4YG"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Tweet" style="plain" id="Wqg-sh-J8F">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="Uoa-9A-Unn" kind="presentation" id="XSn-RP-enS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Add-Mu-c5A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="692" y="694.90254872563719"/>
+        </scene>
+        <!--Tweet View Controller-->
+        <scene sceneID="M6C-m6-GEC">
+            <objects>
+                <viewController id="Qcb-Kl-DYF" customClass="TweetViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NQa-TP-Syg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QJK-Ss-dwc">
+                                <rect key="frame" x="0.0" y="56" width="375" height="128"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="eAO-n8-sDV"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2E8-Fc-wSc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="QJK-Ss-dwc" firstAttribute="top" secondItem="2E8-Fc-wSc" secondAttribute="top" id="ACw-OZ-dOQ"/>
+                            <constraint firstItem="QJK-Ss-dwc" firstAttribute="leading" secondItem="2E8-Fc-wSc" secondAttribute="leading" id="IqN-Jh-FLD"/>
+                            <constraint firstItem="2E8-Fc-wSc" firstAttribute="trailing" secondItem="QJK-Ss-dwc" secondAttribute="trailing" id="m9T-OP-czV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="wPn-MJ-0wn">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" style="plain" id="eSG-Y1-WLg">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="cancel:" destination="Qcb-Kl-DYF" id="FU4-rC-9Xr"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Tweet" style="plain" id="irw-8b-OWR">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="tweet:" destination="Qcb-Kl-DYF" id="fvC-3d-JfO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tweetTextView" destination="QJK-Ss-dwc" id="1PA-D8-9ii"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xbc-3s-iCM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2360.8000000000002" y="576.1619190404798"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xk7-t8-xHZ">
+            <objects>
+                <navigationController id="XPv-2D-7Yq" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wgG-UC-YIP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.30568347289999998" green="0.7086540456" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <navigationBarAppearance key="standardAppearance">
+                            <color key="backgroundColor" red="0.30568347289999998" green="0.7086540456" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </navigationBarAppearance>
+                        <navigationBarAppearance key="scrollEdgeAppearance">
+                            <color key="backgroundColor" red="0.30568347289999998" green="0.7086540456" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </navigationBarAppearance>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="dVW-lG-dL9" kind="relationship" relationship="rootViewController" id="Qrl-FS-eUd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="odw-QJ-E98" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-228" y="696"/>
+        </scene>
+        <!--Tweet Navigation Controller-->
+        <scene sceneID="9SK-hO-w22">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Uoa-9A-Unn" userLabel="Tweet Navigation Controller" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Jl7-8N-IKt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.35984112579999999" green="0.75873511920000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Qcb-Kl-DYF" kind="relationship" relationship="rootViewController" id="WjX-iM-hYV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NwH-Fq-Gkq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1421.5999999999999" y="576.1619190404798"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
